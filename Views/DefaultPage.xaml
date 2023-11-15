@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xLMAOxSTARTER.Views.DefaultPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <ListView x:Name="Usages"
+                      ItemSelected="Usages_ItemSelected"
+                      ItemTapped="Usages_ItemTapped"
+                      BackgroundColor="Pink"
+                      WidthRequest="800"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout>
+                                <Image
+                                    Source="none.png"
+                                    HeightRequest="128"
+                                    />
+                                <VerticalStackLayout
+                                        VerticalOptions="Center"
+                                        Padding="20"
+                                    >
+                                    <Label Text="{Binding PackageName}" FontSize="Title" TextColor="Black"/>
+                                    <Label Text="{Binding AppName}" FontSize="Micro" TextColor="Gray"/>
+                                    <HorizontalStackLayout>
+                                        <Label Text="{Binding UsageTime}" FontSize="Micro" TextColor="Gray"/>
+                                        <Label Text="/"/>
+                                        <Label Text="{Binding MaxUsageTime}" FontSize="Micro" TextColor="Gray"/>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
