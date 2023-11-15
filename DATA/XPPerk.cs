@@ -5,21 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-public class ScorePerk
+public class XPPerk
 {
     public string AppName { get; set; }
     public int ScoreCost { get; set; }
     public float RewardTime { get; set; }
 
-    public ScorePerk(string appName, int scoreCost, float rewardTime) {
+    public XPPerk(string appName, int XPCost, float rewardTime) {
         AppName = appName; 
-        ScoreCost = scoreCost; 
+        XPCost = XPCost; 
         RewardTime = rewardTime;
     }
 
-    public static List<ScorePerk> SamplePerks = new()
+    public bool enableMechanics = true;
+
+    public static List<XPPerk> SamplePerks = new()
     {
         new("Weird App", 100, 1800),
-        new("Weird App", 150, 3600), //Wait for longer to gain more reward
+        new("Weird App", 150, 3600), //Wait for longer to gain more reward, for example
     };
 }
