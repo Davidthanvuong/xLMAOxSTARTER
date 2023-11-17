@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 public class XPPerk
 {
     public string AppName { get; set; }
-    public int ScoreCost { get; set; }
+    public int XPCost { get; set; }
     public float RewardTime { get; set; }
 
-    public XPPerk(string appName, int XPCost, float rewardTime) {
-        AppName = appName; 
-        XPCost = XPCost; 
+    public XPPerk(string appName, int xpCost, float rewardTime) {
+        AppName = appName;
+        XPCost = xpCost;
         RewardTime = rewardTime;
     }
 
