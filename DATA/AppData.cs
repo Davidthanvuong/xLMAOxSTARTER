@@ -24,10 +24,15 @@ namespace xLMAOxSTARTER.DATA
         {
             return SecureStorage.Default.Remove("appdata_" + key);
         }
-        public List<AppInfo> appInfos
+        public static List<AppInfo> AppInfos
         {
-            get => Get<List<AppInfo>>("appinfos").GetAwaiter().GetResult();
-            set { Set("appinfos", value).Wait(); }
+            get => Get<List<AppInfo>>("AppInfos").GetAwaiter().GetResult();
+            set { Set("AppInfos", value).Wait(); }
+        }
+        public static XP XPdata
+        {
+            get => Get<XP>("XPdata").GetAwaiter().GetResult();
+            set { Set("XPdata", value).Wait(); }
         }
     }
 }
