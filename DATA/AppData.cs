@@ -34,5 +34,10 @@ namespace xLMAOxSTARTER.DATA
             get => Get<XP>("XPdata").GetAwaiter().GetResult();
             set { Set("XPdata", value).Wait(); }
         }
+
+        public static void Reset()
+        {
+            Set("AppInfos", AppInfo.SampleUsages).Wait();
+        }
     }
 }
