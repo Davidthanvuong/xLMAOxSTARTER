@@ -29,5 +29,10 @@ namespace xLMAOxSTARTER.DATA
             get => Get<List<AppInfo>>("AppInfos").GetAwaiter().GetResult();
             set { Set("AppInfos", value).Wait(); }
         }
+
+        public static void Reset()
+        {
+            Set("AppInfos", AppInfo.SampleUsages).Wait();
+        }
     }
 }
