@@ -39,12 +39,18 @@ namespace xLMAOxSTARTER.DATA
             get => Get<List<XPPerk>>("XPperks").GetAwaiter().GetResult();
             set { Set("XPperks", value).Wait(); }
         }
+        public static List<Milestone> Milestones
+        {
+            get => Get<List<Milestone>>("Milestones").GetAwaiter().GetResult();
+            set { Set("Milestones", value).Wait(); }
+        }
 
         public static void Reset()
         {
             Set("AppInfos", AppInfo.SampleUsages).Wait();
             Set("XPdata", new XP()).Wait();
             Set("XPperks", XPPerk.SamplePerks).Wait();
+            Set("Milestones", Milestone.Milestones).Wait();
         }
     }
 }
