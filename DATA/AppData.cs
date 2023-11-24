@@ -44,6 +44,11 @@ namespace xLMAOxSTARTER.DATA
             get => Get<List<Milestone>>("Milestones").GetAwaiter().GetResult();
             set { Set("Milestones", value).Wait(); }
         }
+        public static MiscGame MiscGame
+        {
+            get => Get<MiscGame>("MiscGame").GetAwaiter().GetResult();
+            set { Set("MiscGame", value).Wait(); }
+        }
 
         public static void Reset()
         {
